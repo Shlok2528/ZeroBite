@@ -92,7 +92,7 @@ ul li a.active
     float: left;
     font-size: 20px;
     margin-left: 5cm;
-    margin-top: 3cm;
+    margin-top: 5cm;
     width: 35%;
 }
 .Donate
@@ -375,3 +375,4 @@ ul li a.active
     margin-top: 10px;
     color: #000;
 }
+
