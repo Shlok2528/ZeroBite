@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>   
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="ZeroBite.css">
+        <style>
+            h1 
+            {
+                text-align: center;
+                font-style: italic;
+            }
+            label 
+            {
+                text-align: center;
+                display: block; 
+            }
+            input[type="text"] 
+            {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body style="text-align: center;">
+         <div class="heading">
+            <img id="logo" src="logo2-removebg-preview.png" length="80px" width="80px">
+            ZeroBite
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a  href="importance.html">Importance</a></li>
+                <li><a href="methods.html">Methods</a></li>
+                <li><a class="active" href="donate.html">Donate</a></li>
+            </ul>
+        </div>
+        <div style="background-color: white; width: 40%; margin-left: 30%; margin-bottom: 1cm;">
+            <form action="response.html" onsubmit="return validateForm()" method="post">
+                <h1>!Give it Instead of wasting it!</h1>
+                <label for="frame">Organizers name :</label><br>
+                <input Type="text" id="Frame" Name="frame" ><br><br>
+                <label for =lname> Address:</Label><br>
+                <input type="text" id="lname"><br><br>
+                <label for="email address">Email:</Label></br>
+                <input type="text" id="email" Name="email"></br><br>
+                <label for="contact"> Contact Number:</Label><br>
+                <input type="text" id="phone" Name="no"></br><br>
+                <label for="dob"> Date of Donation :</Label><br>
+                <input type="date" id="dob" Name="dob"><br><br>
+
+                <input type="reset" value="clear form" style="padding: 2px;"><br><br>
+                <input type="submit" value="submit" style="padding: 2px;"><br><br>
+            </form>
+        <script>
+            function validateForm()
+            {
+                var mobile = document.getElementById("phone").value;
+                var mobilePattern = /^[0-9]{10}$/;
+                if(!mobile.match(mobilePattern))
+                {
+                    alert("Phone number not filled");
+                    return false;
+                }
+                var email = document.getElementById("email").value;
+                var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if(!email.match(emailPattern))
+                {
+                    alert("Email filled incorrectly");
+                    return false;
+                }
+            }
+        </script>
+        </div>
+        <div class="footer">-
+            <div id="logo2">
+                <img src="logo2-removebg-preview.png" height="150px" width="150px">
+            </div>
+            <div id="social">
+                <h1>Follow Us:</h1>
+                <a href="https://www.instagram.com/shlokbhanushali_25?igsh=eWVmOTBsdjA1a2R1"><img src="soc1.jpg" height="40px" width="50px"></a>
+                <img src="soc2.png" height="40px" width="50px">
+                <a href="https://youtube.com/@thunder_titan1607?si=-lS4MWTW4rb1z7nM"><img src="soc3.jpg" height="40px" width="50px"></a>
+            </div>
+            <div id="contact">
+                <h1>Contact Us:</h1>
+                <h3>Phone No.: +918591142528</h3>
+                <h3>Email Id: shlok.bhanushali25@sakec.ac.in <br>parag.bhaidkar25@sakec.ac.in <br>mahek.bhanushali25@sakec.ac.in</h3>
+            </div>
+            <div id="donate">
+                <a href="donate.html" style="color: white;"><h1>Donate</h1></a>
+                <h3>Leftovers Are Future Meals</h3>
+            </div>
+        </div>
+    </body>
+</html>
